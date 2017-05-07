@@ -16,3 +16,13 @@ C:\Users\Martsan\Desktop\Dysk Google\Studia\SEM VI\TIP\Projekt\Klient\Klient\obj
 C:\Users\Martsan\Desktop\Dysk Google\Studia\SEM VI\TIP\Projekt\Klient\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
 C:\Users\Martsan\Desktop\Dysk Google\Studia\SEM VI\TIP\Projekt\Klient\Klient\obj\Debug\Klient.exe
 C:\Users\Martsan\Desktop\Dysk Google\Studia\SEM VI\TIP\Projekt\Klient\Klient\obj\Debug\Klient.pdb
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\bin\Debug\Klient.exe.config
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.exe
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.pdb
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\bin\Debug\Klient.exe
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\bin\Debug\Klient.pdb
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.csprojResolveAssemblyReference.cache
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.Form1.resources
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.Properties.Resources.resources
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
+C:\Users\Marcin\Source\Repos\TIP\TIP\Klient\Klient\bin\Debug\Bunifu_UI_v1.52.dll
