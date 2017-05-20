@@ -1,0 +1,34 @@
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\bin\Debug\TIP.exe.config
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\bin\Debug\TIP.exe
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\bin\Debug\TIP.pdb
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\bin\Debug\VoIPSDK.dll
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.csprojResolveAssemblyReference.cache
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.Form1.resources
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.Properties.Resources.resources
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.exe
+c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.pdb
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\bin\Debug\TIP.exe.config
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\bin\Debug\TIP.exe
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\bin\Debug\TIP.pdb
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\bin\Debug\VoIPSDK.dll
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.csprojResolveAssemblyReference.cache
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.Properties.Resources.resources
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.exe
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.pdb
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.Logowanie.resources
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.Main.resources
+C:\Users\Martsan\Desktop\TIP\TIP\Klient\TIP\obj\Debug\TIP.Rejestracja.resources
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\bin\Debug\TIP.exe.config
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\bin\Debug\TIP.exe
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\bin\Debug\TIP.pdb
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\bin\Debug\VoIPSDK.dll
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.csprojResolveAssemblyReference.cache
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.Logowanie.resources
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.Main.resources
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.Properties.Resources.resources
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.Rejestracja.resources
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.exe
+C:\Users\Martsan\Desktop\TIP — kopia\TIP\Klient\TIP\obj\Debug\TIP.pdb
