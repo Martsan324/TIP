@@ -51,7 +51,7 @@
             this.lb_haslo.AutoSize = true;
             this.lb_haslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lb_haslo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lb_haslo.Location = new System.Drawing.Point(161, 208);
+            this.lb_haslo.Location = new System.Drawing.Point(161, 179);
             this.lb_haslo.Name = "lb_haslo";
             this.lb_haslo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_haslo.Size = new System.Drawing.Size(58, 24);
@@ -74,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(161, 232);
+            this.label1.Location = new System.Drawing.Point(161, 203);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(130, 24);
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(161, 178);
+            this.label2.Location = new System.Drawing.Point(161, 228);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(44, 24);
@@ -102,21 +102,21 @@
             // 
             // tb_Haslo
             // 
-            this.tb_Haslo.Location = new System.Drawing.Point(297, 210);
+            this.tb_Haslo.Location = new System.Drawing.Point(297, 181);
             this.tb_Haslo.Name = "tb_Haslo";
             this.tb_Haslo.Size = new System.Drawing.Size(243, 20);
             this.tb_Haslo.TabIndex = 7;
             // 
             // tb_PHaslo
             // 
-            this.tb_PHaslo.Location = new System.Drawing.Point(297, 236);
+            this.tb_PHaslo.Location = new System.Drawing.Point(297, 207);
             this.tb_PHaslo.Name = "tb_PHaslo";
             this.tb_PHaslo.Size = new System.Drawing.Size(243, 20);
             this.tb_PHaslo.TabIndex = 8;
             // 
             // tb_Mail
             // 
-            this.tb_Mail.Location = new System.Drawing.Point(297, 184);
+            this.tb_Mail.Location = new System.Drawing.Point(297, 234);
             this.tb_Mail.Name = "tb_Mail";
             this.tb_Mail.Size = new System.Drawing.Size(243, 20);
             this.tb_Mail.TabIndex = 9;
@@ -174,7 +174,7 @@
             // 
             this.Error_Haslo.AutoSize = true;
             this.Error_Haslo.ForeColor = System.Drawing.Color.Red;
-            this.Error_Haslo.Location = new System.Drawing.Point(546, 239);
+            this.Error_Haslo.Location = new System.Drawing.Point(546, 210);
             this.Error_Haslo.Name = "Error_Haslo";
             this.Error_Haslo.Size = new System.Drawing.Size(191, 13);
             this.Error_Haslo.TabIndex = 14;
@@ -184,7 +184,7 @@
             // 
             this.Error_mail.AutoSize = true;
             this.Error_mail.ForeColor = System.Drawing.Color.Red;
-            this.Error_mail.Location = new System.Drawing.Point(546, 191);
+            this.Error_mail.Location = new System.Drawing.Point(546, 241);
             this.Error_mail.Name = "Error_mail";
             this.Error_mail.Size = new System.Drawing.Size(75, 13);
             this.Error_mail.TabIndex = 16;
@@ -194,7 +194,7 @@
             // 
             this.Error_BHaslo.AutoSize = true;
             this.Error_BHaslo.ForeColor = System.Drawing.Color.Red;
-            this.Error_BHaslo.Location = new System.Drawing.Point(323, 259);
+            this.Error_BHaslo.Location = new System.Drawing.Point(324, 257);
             this.Error_BHaslo.Name = "Error_BHaslo";
             this.Error_BHaslo.Size = new System.Drawing.Size(186, 13);
             this.Error_BHaslo.TabIndex = 17;
@@ -204,7 +204,7 @@
             // 
             this.Error_NMail.AutoSize = true;
             this.Error_NMail.ForeColor = System.Drawing.Color.Red;
-            this.Error_NMail.Location = new System.Drawing.Point(546, 191);
+            this.Error_NMail.Location = new System.Drawing.Point(546, 241);
             this.Error_NMail.Name = "Error_NMail";
             this.Error_NMail.Size = new System.Drawing.Size(108, 13);
             this.Error_NMail.TabIndex = 18;

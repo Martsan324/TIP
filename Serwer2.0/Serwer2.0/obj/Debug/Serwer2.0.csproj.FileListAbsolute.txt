@@ -1,0 +1,10 @@
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\bin\Debug\Serwer2.0.exe.config
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\bin\Debug\Serwer2.0.exe
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\bin\Debug\Serwer2.0.pdb
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\bin\Debug\OzekiSDK.xml
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2.0.csprojResolveAssemblyReference.cache
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2._0.Main.resources
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2._0.Properties.Resources.resources
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2.0.csproj.GenerateResource.Cache
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2.0.exe
+C:\Users\Martsan\Desktop\TIP_Projekt\TIP\Serwer2.0\Serwer2.0\obj\Debug\Serwer2.0.pdb

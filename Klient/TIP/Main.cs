@@ -12,12 +12,14 @@ using Ozeki.Media.MediaHandlers;
 using Ozeki.VoIP;
 using Ozeki.VoIP.SDK;
 using Ozeki.Network;
+using System.Data.SqlClient;
 
 namespace TIP
 {
     public partial class Main : Form
     {
         private int UserID = Logowanie.return_UserID();
+        private string IPaddres;
         private ISoftPhone softPhone;
         private IPhoneLine phoneLine;
         private RegState phoneLineInformation;
@@ -40,14 +42,16 @@ namespace TIP
         }
         private void InitializeSoftPhone()
         {
+            downloadIPAddres();
             try
             {
+
                 softPhone = SoftPhoneFactory.CreateSoftPhone(SoftPhoneFactory.GetLocalIP(), 5700, 5750);
                 InvokeGUIThread(() => { lb_Log.Items.Add("Softphone created!"); });
                 
                 softPhone.IncomingCall += new EventHandler<VoIPEventArgs<IPhoneCall>>(softPhone_inComingCall);
 
-                SIPAccount sa = new SIPAccount(true, UserID.ToString(), UserID.ToString(), UserID.ToString(), UserID.ToString(), NetworkAddressHelper.GetLocalIP().ToString(), 5060);
+                SIPAccount sa = new SIPAccount(true, UserID.ToString(), UserID.ToString(), UserID.ToString(), UserID.ToString(), IPaddres, 5060); //NetworkAddressHelper.GetLocalIP().ToString()
                 InvokeGUIThread(() => { lb_Log.Items.Add("SIP account created! - " + sa.RegisterName); });
 
                 phoneLine = softPhone.CreatePhoneLine(sa);
@@ -62,6 +66,42 @@ namespace TIP
                 InvokeGUIThread(() => { lb_Log.Items.Add("Local IP error!"); });
             }
 
+        }
+        private void downloadIPAddres()
+        {
+            using (SqlConnection con = new SqlConnection(@"Server=tcp:tipserwer.database.windows.net;Database=TIP;
+                                                           User ID=martsan;Password=Tiptip123;Trusted_Connection=False;Encrypt=True;"))
+            {
+                bool polaczenie = true;
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception blad_sieci)
+                {
+
+                    polaczenie = false;
+                };
+                bool dostep = true;
+                bool istnieje = true;
+
+                if (polaczenie == true)
+                {
+
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    DataTable data = new DataTable();
+                    SqlDataAdapter sd = new SqlDataAdapter("Select IPAdres From Rooms WHERE RoomID=1", con);
+                    sd.Fill(data);
+                    IPaddres=data.Rows[0][0].ToString();
+                    //MessageBox.Show(IPaddres);
+
+
+                }
+            }
         }
 
         private void StartDevices()
@@ -218,7 +258,7 @@ namespace TIP
                 return;
             }
 
-            call = softPhone.CreateCallObject(phoneLine,"1005");//lbl_NumberToDial.Text);
+            call = softPhone.CreateCallObject(phoneLine,Dzwon.Text);//lbl_NumberToDial.Text);
             WireUpCallEvents();
             call.Start();
         }
@@ -243,6 +283,11 @@ namespace TIP
             }
 
            // lbl_NumberToDial.Text = string.Empty;
+        }
+
+        private void Dzwon_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
