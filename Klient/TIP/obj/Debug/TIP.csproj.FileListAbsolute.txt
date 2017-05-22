@@ -8,3 +8,13 @@ c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.Pro
 c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache
 c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.exe
 c:\users\martsan\documents\visual studio 2017\Projects\TIP\TIP\obj\Debug\TIP.pdb
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\bin\Debug\TIP.exe.config
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.exe
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.pdb
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\bin\Debug\TIP.exe
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\bin\Debug\TIP.pdb
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.csprojResolveAssemblyReference.cache
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.Form1.resources
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.Logowanie.resources
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.Properties.Resources.resources
+C:\Users\Marcin\Source\Repos\TIP2\Klient\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache

@@ -5,3 +5,5 @@ C:\Users\Martsan\Desktop\01_BasePBX\PBX\01_BasePBX\BasePBX\bin\Debug\OzekiSDK.xm
 C:\Users\Martsan\Desktop\01_BasePBX\PBX\01_BasePBX\BasePBX\obj\x86\Debug\BasePBX.csprojResolveAssemblyReference.cache
 C:\Users\Martsan\Desktop\01_BasePBX\PBX\01_BasePBX\BasePBX\obj\x86\Debug\BasePBX.exe
 C:\Users\Martsan\Desktop\01_BasePBX\PBX\01_BasePBX\BasePBX\obj\x86\Debug\BasePBX.pdb
+C:\Users\Marcin\Source\Repos\TIP2\Serwer\PBX\01_BasePBX\BasePBX\obj\x86\Debug\BasePBX.exe
+C:\Users\Marcin\Source\Repos\TIP2\Serwer\PBX\01_BasePBX\BasePBX\obj\x86\Debug\BasePBX.pdb

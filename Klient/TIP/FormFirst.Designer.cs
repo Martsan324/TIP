@@ -1,6 +1,6 @@
 ﻿namespace TIP
 {
-    partial class Form1
+    partial class FormFirst
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -31,6 +31,7 @@
             this.lb_Log = new System.Windows.Forms.ListBox();
             this.btn_PickUp = new System.Windows.Forms.Button();
             this.btn_HangUp = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Log
@@ -63,11 +64,22 @@
             this.btn_HangUp.UseVisualStyleBackColor = true;
             this.btn_HangUp.Click += new System.EventHandler(this.btn_HangUp_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(339, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 55);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "PRZEJDŹ DO NOWEGO WYGLĄDU";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 427);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_HangUp);
             this.Controls.Add(this.btn_PickUp);
             this.Controls.Add(this.lb_Log);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.ListBox lb_Log;
         private System.Windows.Forms.Button btn_PickUp;
         private System.Windows.Forms.Button btn_HangUp;
+        private System.Windows.Forms.Button button1;
     }
 }
 

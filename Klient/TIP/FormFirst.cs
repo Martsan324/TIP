@@ -15,7 +15,7 @@ using Ozeki.VoIP.SDK;
 
 namespace TIP
 {
-    public partial class Form1 : Form
+    public partial class FormFirst : Form
     {
 
         private ISoftPhone softPhone;
@@ -29,7 +29,7 @@ namespace TIP
         PhoneCallAudioReceiver mediaReceiver = new PhoneCallAudioReceiver();
 
         private bool inComingCall;
-        public Form1()
+        public FormFirst()
         {
             InitializeComponent();
         }
@@ -241,6 +241,11 @@ namespace TIP
             }
 
            // lbl_NumberToDial.Text = string.Empty;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Logowanie.ActiveForm.Visible = true;
         }
     }
     
