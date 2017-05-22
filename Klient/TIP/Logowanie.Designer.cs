@@ -28,147 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.text_login = new System.Windows.Forms.TextBox();
-            this.text_haslo = new System.Windows.Forms.TextBox();
-            this.label_blad = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Lb_login = new System.Windows.Forms.Label();
+            this.lb_haslo = new System.Windows.Forms.Label();
+            this.tb_login = new System.Windows.Forms.TextBox();
+            this.tb_haslo = new System.Windows.Forms.TextBox();
+            this.bt_LogIn = new System.Windows.Forms.Button();
+            this.bt_Exit = new System.Windows.Forms.Button();
+            this.bt_rejestracja = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // Lb_login
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(59, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rejestracja";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.Lb_login.AutoSize = true;
+            this.Lb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Lb_login.ForeColor = System.Drawing.SystemColors.Control;
+            this.Lb_login.Location = new System.Drawing.Point(253, 173);
+            this.Lb_login.Name = "Lb_login";
+            this.Lb_login.Size = new System.Drawing.Size(47, 24);
+            this.Lb_login.TabIndex = 0;
+            this.Lb_login.Text = "Nick";
             // 
-            // label2
+            // lb_haslo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(98, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "e-mail:";
+            this.lb_haslo.AutoSize = true;
+            this.lb_haslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lb_haslo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lb_haslo.Location = new System.Drawing.Point(252, 200);
+            this.lb_haslo.Name = "lb_haslo";
+            this.lb_haslo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_haslo.Size = new System.Drawing.Size(58, 24);
+            this.lb_haslo.TabIndex = 1;
+            this.lb_haslo.Text = "Haslo";
             // 
-            // label3
+            // tb_login
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(101, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "hasło:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.tb_login.Location = new System.Drawing.Point(316, 177);
+            this.tb_login.Name = "tb_login";
+            this.tb_login.Size = new System.Drawing.Size(231, 20);
+            this.tb_login.TabIndex = 2;
             // 
-            // text_login
+            // tb_haslo
             // 
-            this.text_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.text_login.Location = new System.Drawing.Point(159, 101);
-            this.text_login.Name = "text_login";
-            this.text_login.Size = new System.Drawing.Size(192, 26);
-            this.text_login.TabIndex = 3;
+            this.tb_haslo.Location = new System.Drawing.Point(316, 200);
+            this.tb_haslo.Name = "tb_haslo";
+            this.tb_haslo.Size = new System.Drawing.Size(231, 20);
+            this.tb_haslo.TabIndex = 3;
             // 
-            // text_haslo
+            // bt_LogIn
             // 
-            this.text_haslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.text_haslo.Location = new System.Drawing.Point(159, 137);
-            this.text_haslo.Name = "text_haslo";
-            this.text_haslo.PasswordChar = '*';
-            this.text_haslo.Size = new System.Drawing.Size(192, 26);
-            this.text_haslo.TabIndex = 4;
+            this.bt_LogIn.BackColor = System.Drawing.Color.SteelBlue;
+            this.bt_LogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_LogIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bt_LogIn.Location = new System.Drawing.Point(474, 226);
+            this.bt_LogIn.Name = "bt_LogIn";
+            this.bt_LogIn.Size = new System.Drawing.Size(73, 33);
+            this.bt_LogIn.TabIndex = 4;
+            this.bt_LogIn.Text = "Zaloguj";
+            this.bt_LogIn.UseVisualStyleBackColor = false;
+            this.bt_LogIn.Click += new System.EventHandler(this.bt_LogIn_Click);
             // 
-            // label_blad
+            // bt_Exit
             // 
-            this.label_blad.AutoSize = true;
-            this.label_blad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_blad.ForeColor = System.Drawing.Color.Red;
-            this.label_blad.Location = new System.Drawing.Point(63, 69);
-            this.label_blad.Name = "label_blad";
-            this.label_blad.Size = new System.Drawing.Size(350, 18);
-            this.label_blad.TabIndex = 5;
-            this.label_blad.Text = "Użytkownik o takim adresie email już posiada konto";
-            this.label_blad.Click += new System.EventHandler(this.label_blad_Click);
+            this.bt_Exit.BackColor = System.Drawing.Color.IndianRed;
+            this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bt_Exit.Location = new System.Drawing.Point(316, 226);
+            this.bt_Exit.Name = "bt_Exit";
+            this.bt_Exit.Size = new System.Drawing.Size(73, 33);
+            this.bt_Exit.TabIndex = 5;
+            this.bt_Exit.Text = "Wyjście";
+            this.bt_Exit.UseVisualStyleBackColor = false;
+            this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
-            // label4
+            // bt_rejestracja
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(62, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "pseudonim:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(159, 179);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 26);
-            this.textBox1.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(84, 211);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(84, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 40);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Utwórz konto";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(227, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 49);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Zmień avatar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_rejestracja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bt_rejestracja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_rejestracja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bt_rejestracja.Location = new System.Drawing.Point(395, 226);
+            this.bt_rejestracja.Name = "bt_rejestracja";
+            this.bt_rejestracja.Size = new System.Drawing.Size(73, 33);
+            this.bt_rejestracja.TabIndex = 6;
+            this.bt_rejestracja.Text = "Rejestracja";
+            this.bt_rejestracja.UseVisualStyleBackColor = false;
+            this.bt_rejestracja.Click += new System.EventHandler(this.bt_rejestracja_Click);
             // 
             // Logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 401);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label_blad);
-            this.Controls.Add(this.text_haslo);
-            this.Controls.Add(this.text_login);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.bt_rejestracja);
+            this.Controls.Add(this.bt_Exit);
+            this.Controls.Add(this.bt_LogIn);
+            this.Controls.Add(this.tb_haslo);
+            this.Controls.Add(this.tb_login);
+            this.Controls.Add(this.lb_haslo);
+            this.Controls.Add(this.Lb_login);
             this.Name = "Logowanie";
             this.Text = "Logowanie";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Logowanie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,16 +136,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox text_login;
-        private System.Windows.Forms.TextBox text_haslo;
-        private System.Windows.Forms.Label label_blad;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Lb_login;
+        private System.Windows.Forms.Label lb_haslo;
+        private System.Windows.Forms.TextBox tb_login;
+        private System.Windows.Forms.TextBox tb_haslo;
+        private System.Windows.Forms.Button bt_LogIn;
+        private System.Windows.Forms.Button bt_Exit;
+        private System.Windows.Forms.Button bt_rejestracja;
     }
 }

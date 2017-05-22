@@ -16,7 +16,7 @@ namespace TIP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormFirst());
+            Application.Run(new Logowanie());
         }
     }
 }
