@@ -71,6 +71,7 @@
             // 
             this.tb_haslo.Location = new System.Drawing.Point(316, 200);
             this.tb_haslo.Name = "tb_haslo";
+            this.tb_haslo.PasswordChar = '•';
             this.tb_haslo.Size = new System.Drawing.Size(231, 20);
             this.tb_haslo.TabIndex = 3;
             // 
