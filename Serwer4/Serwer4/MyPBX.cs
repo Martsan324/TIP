@@ -43,7 +43,9 @@ namespace Serwer4
 
                     if (con.State != ConnectionState.Open)
                     {
-                        Console.WriteLine("Problem z nawiązaniem połączenia z bazą danych.");
+                        Console.WriteLine("Problem z nawiązaniem połączenia z bazą danych, aplikacja zostanie zamknieta.");
+                        Console.ReadLine();
+                        Environment.Exit(0);
                     }
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandText = ("UPDATE Rooms SET IPAdres='" + localAddress.ToString() + "' WHERE RoomID=1");

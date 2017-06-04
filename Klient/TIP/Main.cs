@@ -20,6 +20,8 @@ namespace TIP
     {
         private int UserID = Logowanie.return_UserID();
         private string IPaddres;
+        private DataTable kontakty = new DataTable();
+        private DataTable RoomIP = new DataTable();
         private ISoftPhone softPhone;
         private IPhoneLine phoneLine;
         private RegState phoneLineInformation;
@@ -29,7 +31,7 @@ namespace TIP
         MediaConnector connector = new MediaConnector();
         PhoneCallAudioSender mediaSender = new PhoneCallAudioSender();
         PhoneCallAudioReceiver mediaReceiver = new PhoneCallAudioReceiver();
-
+        
         private bool inComingCall;
         public Main()
         {
@@ -37,9 +39,12 @@ namespace TIP
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            lb_ID.Text = UserID.ToString();
             InitializeSoftPhone();
+            WczytajKontakty(true);
 
         }
+
         private void InitializeSoftPhone()
         {
             downloadIPAddres();
@@ -51,15 +56,17 @@ namespace TIP
                 
                 softPhone.IncomingCall += new EventHandler<VoIPEventArgs<IPhoneCall>>(softPhone_inComingCall);
 
-                SIPAccount sa = new SIPAccount(true, UserID.ToString(), UserID.ToString(), UserID.ToString(), UserID.ToString(), IPaddres, 5060); //NetworkAddressHelper.GetLocalIP().ToString()
+                SIPAccount sa = new SIPAccount(true, UserID.ToString(), UserID.ToString(), UserID.ToString(), UserID.ToString(), IPaddres, 5060);
                 InvokeGUIThread(() => { lb_Log.Items.Add("SIP account created! - " + sa.RegisterName); });
-
+                
                 phoneLine = softPhone.CreatePhoneLine(sa);
                 phoneLine.RegistrationStateChanged += phoneLine_PhoneLineInformation;
                 InvokeGUIThread(() => { lb_Log.Items.Add("Phoneline created."); });
                 softPhone.RegisterPhoneLine(phoneLine);
 
+
                 ConnectMedia();
+                //softPhone.UnregisterPhoneLine(phoneLine);
             }
             catch (Exception ex)
             {
@@ -93,13 +100,53 @@ namespace TIP
                     {
                         MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    DataTable data = new DataTable();
+                    
                     SqlDataAdapter sd = new SqlDataAdapter("Select IPAdres From Rooms WHERE RoomID=1", con);
-                    sd.Fill(data);
-                    IPaddres=data.Rows[0][0].ToString();
-                    //MessageBox.Show(IPaddres);
+                    sd.Fill(RoomIP);
+                    IPaddres= RoomIP.Rows[0][0].ToString();
 
 
+                }
+            }
+        }
+
+        private void WczytajKontakty(bool Online)
+        {
+           // listBox_kontakty.Items.Clear();
+            using (SqlConnection con = new SqlConnection(@"Server=tcp:tipserwer.database.windows.net;Database=TIP;
+                                                           User ID=martsan;Password=Tiptip123;Trusted_Connection=False;Encrypt=True;"))
+            {
+                bool polaczenie = true;
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception blad_sieci)
+                {
+
+                    polaczenie = false;
+                };
+                bool dostep = true;
+                bool istnieje = true;
+
+                if (polaczenie == true)
+                {
+
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    
+                    SqlDataAdapter sd = new SqlDataAdapter("SELECT UserID,Nick FROM Users where IsOnline='" + Online + "' AND UserID in (SELECT ID_kontaktu FROM Contacts C INNER JOIN Users U ON C.ID_Wlasciciela=U.UserID WHERE ID_Wlasciciela='" + UserID+"')", con);
+                    sd.Fill(kontakty);
+                    string temp;
+                    for (int i = 0; i < kontakty.Rows.Count; i++)
+                    {
+                        //temp = kontakty.Rows[i][1].ToString() +" ID: "+ kontakty.Rows[i][0].ToString();
+                        //listBox_kontakty.Items.Add(temp);
+                        listBox_kontakty.Items.Add(kontakty.Rows[i][1].ToString());
+                    }
                 }
             }
         }
@@ -165,7 +212,8 @@ namespace TIP
         private void softPhone_inComingCall(object sender, VoIPEventArgs<IPhoneCall> e)
         {
             InvokeGUIThread(() => { lb_Log.Items.Add("Incoming call from: " + e.Item.DialInfo.ToString()); });
-
+            btn_PickUp.Text = "Odbierz";
+            btn_HangUp.Text = "Odrzuć";
             call = e.Item;
             WireUpCallEvents();
             inComingCall = true;
@@ -242,7 +290,7 @@ namespace TIP
             {
                 inComingCall = false;
                 call.Answer();
-
+                btn_HangUp.Text = "Rozłacz się";
                 InvokeGUIThread(() => { lb_Log.Items.Add("Call accepted."); });
                 return;
             }
@@ -258,7 +306,7 @@ namespace TIP
                 return;
             }
 
-            call = softPhone.CreateCallObject(phoneLine,Dzwon.Text);//lbl_NumberToDial.Text);
+            call = softPhone.CreateCallObject(phoneLine,tb_Dzwon.Text);
             WireUpCallEvents();
             call.Start();
         }
@@ -269,26 +317,95 @@ namespace TIP
             {
                 if (inComingCall && call.CallState == CallState.Ringing)
                 {
+                    btn_PickUp.Text = "Zadzwoń";
                     call.Reject();
                     InvokeGUIThread(() => { lb_Log.Items.Add("Call rejected."); });
                 }
                 else
                 {
+                    btn_HangUp.Text = "Odrzuć";
                     call.HangUp();
                     inComingCall = false;
                     InvokeGUIThread(() => { lb_Log.Items.Add("Call hanged up."); });
                 }
 
                 call = null;
-            }
-
-           // lbl_NumberToDial.Text = string.Empty;
+            }           
         }
 
         private void Dzwon_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void listBox_kontakty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < kontakty.Rows.Count; i++)
+            {                
+                if (listBox_kontakty.SelectedItem.ToString() == kontakty.Rows[i][1].ToString())
+                {
+                    tb_Dzwon.Text = kontakty.Rows[i][0].ToString();
+
+
+                }
+            }
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            using (SqlConnection con = new SqlConnection(@"Server=tcp:tipserwer.database.windows.net;Database=TIP;
+                                                           User ID=martsan;Password=Tiptip123;Trusted_Connection=False;Encrypt=True;"))
+            {
+                bool polaczenie = true;
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception blad_sieci)
+                {
+
+                    polaczenie = false;
+                };
+                bool dostep = true;
+                bool istnieje = true;
+
+                if (polaczenie == true)
+                {
+                    if (con.State != ConnectionState.Open)
+                    {
+                        MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandText = "Update Users set IsOnline=0 WHERE UserID='" + UserID + "';";
+                    cmd.ExecuteNonQuery();
+                }
+                System.Windows.Forms.Application.Exit();
+            }
+        }
+
+        private void cb_online_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_online.Checked == true)
+            {
+                kontakty.Clear();
+                listBox_kontakty.Items.Clear();
+                WczytajKontakty(false);
+            }
+            if (cb_online.Checked == false)
+            {
+                kontakty.Clear();
+                listBox_kontakty.Items.Clear();
+
+                WczytajKontakty(true);
+            }
+        }
+
+        private void bt_szukaj_Click(object sender, EventArgs e)
+        {
+            DodajZnajomych dod = new DodajZnajomych();
+            dod.Show();
+        }
     }
-    
+   
 }

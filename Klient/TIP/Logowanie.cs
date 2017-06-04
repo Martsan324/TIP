@@ -23,7 +23,7 @@ namespace TIP
         {
 
         }
-        //blabla
+        
         private void connect()
         {
             using (SqlConnection con = new SqlConnection(@"Server=tcp:tipserwer.database.windows.net;Database=TIP;
@@ -73,17 +73,21 @@ namespace TIP
                         Int32.TryParse(data1.Rows[0][0].ToString(),out temp);
                         UserID = temp;
 
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandText = "Update Users set IsOnline=1 WHERE UserID='"+ UserID + "';";
+                        cmd.ExecuteNonQuery();
+
                         Main main = new Main();
                         this.Hide();
                         main.Show();
                         con.Close();
+                        
                     }
 
                 }
                 else MessageBox.Show("Blad sieci");
             }
         }
-
         
         private void bt_LogIn_Click(object sender, EventArgs e)
         {
