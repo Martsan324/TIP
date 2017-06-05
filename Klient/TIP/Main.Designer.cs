@@ -38,16 +38,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lb_ID = new System.Windows.Forms.Label();
             this.bt_szukaj = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_Log
             // 
             this.lb_Log.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lb_Log.FormattingEnabled = true;
-            this.lb_Log.Location = new System.Drawing.Point(11, 368);
+            this.lb_Log.Location = new System.Drawing.Point(182, 165);
             this.lb_Log.Margin = new System.Windows.Forms.Padding(2);
             this.lb_Log.Name = "lb_Log";
-            this.lb_Log.Size = new System.Drawing.Size(762, 82);
+            this.lb_Log.Size = new System.Drawing.Size(591, 199);
             this.lb_Log.TabIndex = 0;
             this.lb_Log.SelectedIndexChanged += new System.EventHandler(this.lb_Log_SelectedIndexChanged);
             // 
@@ -55,7 +56,7 @@
             // 
             this.btn_PickUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_PickUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PickUp.Location = new System.Drawing.Point(399, 337);
+            this.btn_PickUp.Location = new System.Drawing.Point(440, 98);
             this.btn_PickUp.Name = "btn_PickUp";
             this.btn_PickUp.Size = new System.Drawing.Size(107, 26);
             this.btn_PickUp.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             this.btn_HangUp.BackColor = System.Drawing.Color.IndianRed;
             this.btn_HangUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HangUp.Location = new System.Drawing.Point(286, 338);
+            this.btn_HangUp.Location = new System.Drawing.Point(316, 98);
             this.btn_HangUp.Name = "btn_HangUp";
             this.btn_HangUp.Size = new System.Drawing.Size(107, 26);
             this.btn_HangUp.TabIndex = 2;
@@ -78,9 +79,9 @@
             // tb_Dzwon
             // 
             this.tb_Dzwon.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tb_Dzwon.Location = new System.Drawing.Point(286, 311);
+            this.tb_Dzwon.Location = new System.Drawing.Point(316, 72);
             this.tb_Dzwon.Name = "tb_Dzwon";
-            this.tb_Dzwon.Size = new System.Drawing.Size(220, 20);
+            this.tb_Dzwon.Size = new System.Drawing.Size(231, 20);
             this.tb_Dzwon.TabIndex = 3;
             this.tb_Dzwon.TextChanged += new System.EventHandler(this.Dzwon_TextChanged);
             // 
@@ -88,9 +89,9 @@
             // 
             this.listBox_kontakty.BackColor = System.Drawing.Color.DarkSlateGray;
             this.listBox_kontakty.FormattingEnabled = true;
-            this.listBox_kontakty.Location = new System.Drawing.Point(11, 19);
+            this.listBox_kontakty.Location = new System.Drawing.Point(11, 54);
             this.listBox_kontakty.Name = "listBox_kontakty";
-            this.listBox_kontakty.Size = new System.Drawing.Size(87, 290);
+            this.listBox_kontakty.Size = new System.Drawing.Size(157, 277);
             this.listBox_kontakty.TabIndex = 4;
             this.listBox_kontakty.SelectedIndexChanged += new System.EventHandler(this.listBox_kontakty_SelectedIndexChanged);
             // 
@@ -98,17 +99,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(283, 295);
+            this.label1.Location = new System.Drawing.Point(313, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(234, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Podaj numer:";
+            this.label1.Text = "Podaj numer lub wybierz osobę z listy kontaktów";
             // 
             // cb_online
             // 
             this.cb_online.AutoSize = true;
             this.cb_online.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_online.Location = new System.Drawing.Point(12, 5);
+            this.cb_online.Location = new System.Drawing.Point(79, 31);
             this.cb_online.Name = "cb_online";
             this.cb_online.Size = new System.Drawing.Size(89, 17);
             this.cb_online.TabIndex = 6;
@@ -141,20 +142,32 @@
             this.bt_szukaj.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_szukaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_szukaj.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_szukaj.Location = new System.Drawing.Point(11, 311);
+            this.bt_szukaj.Location = new System.Drawing.Point(11, 337);
             this.bt_szukaj.Name = "bt_szukaj";
-            this.bt_szukaj.Size = new System.Drawing.Size(87, 49);
+            this.bt_szukaj.Size = new System.Drawing.Size(157, 27);
             this.bt_szukaj.TabIndex = 16;
             this.bt_szukaj.Text = "Szukaj Znajomych";
             this.bt_szukaj.UseVisualStyleBackColor = false;
             this.bt_szukaj.Click += new System.EventHandler(this.bt_szukaj_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(24, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 17);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "LISTA KONTAKTÓW:";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(785, 377);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_szukaj);
             this.Controls.Add(this.lb_ID);
             this.Controls.Add(this.label2);
@@ -186,6 +199,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_ID;
         private System.Windows.Forms.Button bt_szukaj;
+        private System.Windows.Forms.Label label3;
     }
 }
 

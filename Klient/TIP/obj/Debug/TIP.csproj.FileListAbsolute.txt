@@ -55,3 +55,15 @@ C:\Users\Martsan\Desktop\tipppp\TIP\Klient\TIP\obj\Debug\TIP.csproj.GenerateReso
 C:\Users\Martsan\Desktop\tipppp\TIP\Klient\TIP\obj\Debug\TIP.exe
 C:\Users\Martsan\Desktop\tipppp\TIP\Klient\TIP\obj\Debug\TIP.pdb
 C:\Users\Martsan\Desktop\tipppp\TIP\Klient\TIP\obj\Debug\TIP.DodajZnajomych.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\bin\Debug\TIP.exe.config
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.exe
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.pdb
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\bin\Debug\TIP.exe
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\bin\Debug\TIP.pdb
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.csprojResolveAssemblyReference.cache
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.DodajZnajomych.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.Logowanie.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.Main.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.Properties.Resources.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.Rejestracja.resources
+C:\Users\Marcin\Source\Repos\TIP3\Klient\TIP\obj\Debug\TIP.csproj.GenerateResource.Cache
