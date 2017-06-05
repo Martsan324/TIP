@@ -99,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(313, 47);
+            this.label1.Location = new System.Drawing.Point(313, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 13);
             this.label1.TabIndex = 5;
@@ -166,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(785, 377);
+            this.ClientSize = new System.Drawing.Size(785, 374);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_szukaj);
             this.Controls.Add(this.lb_ID);
