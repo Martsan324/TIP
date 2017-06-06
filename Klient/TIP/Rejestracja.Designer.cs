@@ -44,6 +44,7 @@
             this.Error_mail = new System.Windows.Forms.Label();
             this.Error_BHaslo = new System.Windows.Forms.Label();
             this.Error_NMail = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_haslo
@@ -51,7 +52,7 @@
             this.lb_haslo.AutoSize = true;
             this.lb_haslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lb_haslo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lb_haslo.Location = new System.Drawing.Point(161, 179);
+            this.lb_haslo.Location = new System.Drawing.Point(64, 138);
             this.lb_haslo.Name = "lb_haslo";
             this.lb_haslo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_haslo.Size = new System.Drawing.Size(58, 24);
@@ -63,7 +64,7 @@
             this.Lb_login.AutoSize = true;
             this.Lb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Lb_login.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lb_login.Location = new System.Drawing.Point(161, 155);
+            this.Lb_login.Location = new System.Drawing.Point(64, 114);
             this.Lb_login.Name = "Lb_login";
             this.Lb_login.Size = new System.Drawing.Size(47, 24);
             this.Lb_login.TabIndex = 2;
@@ -74,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(161, 203);
+            this.label1.Location = new System.Drawing.Point(64, 162);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(130, 24);
@@ -86,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(161, 228);
+            this.label2.Location = new System.Drawing.Point(64, 187);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(44, 24);
@@ -95,28 +96,28 @@
             // 
             // tb_Nick
             // 
-            this.tb_Nick.Location = new System.Drawing.Point(297, 155);
+            this.tb_Nick.Location = new System.Drawing.Point(200, 114);
             this.tb_Nick.Name = "tb_Nick";
             this.tb_Nick.Size = new System.Drawing.Size(243, 20);
             this.tb_Nick.TabIndex = 6;
             // 
             // tb_Haslo
             // 
-            this.tb_Haslo.Location = new System.Drawing.Point(297, 181);
+            this.tb_Haslo.Location = new System.Drawing.Point(200, 140);
             this.tb_Haslo.Name = "tb_Haslo";
             this.tb_Haslo.Size = new System.Drawing.Size(243, 20);
             this.tb_Haslo.TabIndex = 7;
             // 
             // tb_PHaslo
             // 
-            this.tb_PHaslo.Location = new System.Drawing.Point(297, 207);
+            this.tb_PHaslo.Location = new System.Drawing.Point(200, 166);
             this.tb_PHaslo.Name = "tb_PHaslo";
             this.tb_PHaslo.Size = new System.Drawing.Size(243, 20);
             this.tb_PHaslo.TabIndex = 8;
             // 
             // tb_Mail
             // 
-            this.tb_Mail.Location = new System.Drawing.Point(297, 234);
+            this.tb_Mail.Location = new System.Drawing.Point(200, 193);
             this.tb_Mail.Name = "tb_Mail";
             this.tb_Mail.Size = new System.Drawing.Size(243, 20);
             this.tb_Mail.TabIndex = 9;
@@ -126,7 +127,7 @@
             this.bt_Zarejestruj.BackColor = System.Drawing.Color.SteelBlue;
             this.bt_Zarejestruj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Zarejestruj.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_Zarejestruj.Location = new System.Drawing.Point(463, 273);
+            this.bt_Zarejestruj.Location = new System.Drawing.Point(366, 232);
             this.bt_Zarejestruj.Name = "bt_Zarejestruj";
             this.bt_Zarejestruj.Size = new System.Drawing.Size(77, 33);
             this.bt_Zarejestruj.TabIndex = 10;
@@ -139,7 +140,7 @@
             this.bt_Exit.BackColor = System.Drawing.Color.IndianRed;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_Exit.Location = new System.Drawing.Point(297, 273);
+            this.bt_Exit.Location = new System.Drawing.Point(200, 232);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(77, 33);
             this.bt_Exit.TabIndex = 11;
@@ -152,7 +153,7 @@
             this.bt_rejestracja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bt_rejestracja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_rejestracja.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_rejestracja.Location = new System.Drawing.Point(380, 273);
+            this.bt_rejestracja.Location = new System.Drawing.Point(283, 232);
             this.bt_rejestracja.Name = "bt_rejestracja";
             this.bt_rejestracja.Size = new System.Drawing.Size(77, 33);
             this.bt_rejestracja.TabIndex = 12;
@@ -164,7 +165,7 @@
             // 
             this.Error_Nick.AutoSize = true;
             this.Error_Nick.ForeColor = System.Drawing.Color.Red;
-            this.Error_Nick.Location = new System.Drawing.Point(546, 158);
+            this.Error_Nick.Location = new System.Drawing.Point(449, 117);
             this.Error_Nick.Name = "Error_Nick";
             this.Error_Nick.Size = new System.Drawing.Size(78, 13);
             this.Error_Nick.TabIndex = 13;
@@ -174,7 +175,7 @@
             // 
             this.Error_Haslo.AutoSize = true;
             this.Error_Haslo.ForeColor = System.Drawing.Color.Red;
-            this.Error_Haslo.Location = new System.Drawing.Point(546, 210);
+            this.Error_Haslo.Location = new System.Drawing.Point(449, 169);
             this.Error_Haslo.Name = "Error_Haslo";
             this.Error_Haslo.Size = new System.Drawing.Size(191, 13);
             this.Error_Haslo.TabIndex = 14;
@@ -184,7 +185,7 @@
             // 
             this.Error_mail.AutoSize = true;
             this.Error_mail.ForeColor = System.Drawing.Color.Red;
-            this.Error_mail.Location = new System.Drawing.Point(546, 241);
+            this.Error_mail.Location = new System.Drawing.Point(449, 200);
             this.Error_mail.Name = "Error_mail";
             this.Error_mail.Size = new System.Drawing.Size(75, 13);
             this.Error_mail.TabIndex = 16;
@@ -194,7 +195,7 @@
             // 
             this.Error_BHaslo.AutoSize = true;
             this.Error_BHaslo.ForeColor = System.Drawing.Color.Red;
-            this.Error_BHaslo.Location = new System.Drawing.Point(324, 257);
+            this.Error_BHaslo.Location = new System.Drawing.Point(227, 216);
             this.Error_BHaslo.Name = "Error_BHaslo";
             this.Error_BHaslo.Size = new System.Drawing.Size(186, 13);
             this.Error_BHaslo.TabIndex = 17;
@@ -204,18 +205,30 @@
             // 
             this.Error_NMail.AutoSize = true;
             this.Error_NMail.ForeColor = System.Drawing.Color.Red;
-            this.Error_NMail.Location = new System.Drawing.Point(546, 241);
+            this.Error_NMail.Location = new System.Drawing.Point(449, 200);
             this.Error_NMail.Name = "Error_NMail";
             this.Error_NMail.Size = new System.Drawing.Size(108, 13);
             this.Error_NMail.TabIndex = 18;
             this.Error_NMail.Text = "Mail jest niepoprawny";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(190, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 55);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Rejestracja";
             // 
             // Rejestracja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(687, 297);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Error_NMail);
             this.Controls.Add(this.Error_BHaslo);
             this.Controls.Add(this.Error_mail);
@@ -258,5 +271,6 @@
         private System.Windows.Forms.Label Error_mail;
         private System.Windows.Forms.Label Error_BHaslo;
         private System.Windows.Forms.Label Error_NMail;
+        private System.Windows.Forms.Label label3;
     }
 }

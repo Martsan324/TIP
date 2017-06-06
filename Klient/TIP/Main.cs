@@ -164,6 +164,7 @@ namespace TIP
                 InvokeGUIThread(() => { lb_Log.Items.Add("Speaker Started."); });
             }
         }
+
         private void StopDevices()
         {
             if (microphone != null)
@@ -398,6 +399,7 @@ namespace TIP
                 listBox_kontakty.Items.Clear();
 
                 WczytajKontakty(true);
+                WczytajKontakty(false);
             }
         }
 

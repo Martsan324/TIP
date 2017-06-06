@@ -19,3 +19,9 @@ C:\Users\Martsan\Desktop\tipppp\TIP\Serwer4\Serwer4\obj\Debug\Serwer4.pdb
 C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\Serwer4.exe.config
 C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\obj\Debug\Serwer4.exe
 C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\obj\Debug\Serwer4.pdb
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\Serwer4.exe
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\Serwer4.pdb
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\OzekiComputerVision.dll
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\OzekiSDK.dll
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\bin\Debug\OzekiSDK.xml
+C:\Users\Marcin\Source\Repos\TIP3\Serwer4\Serwer4\obj\Debug\Serwer4.csprojResolveAssemblyReference.cache
