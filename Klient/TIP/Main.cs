@@ -13,6 +13,7 @@ using Ozeki.VoIP;
 using Ozeki.VoIP.SDK;
 using Ozeki.Network;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace TIP
 {
@@ -20,6 +21,7 @@ namespace TIP
     {
         private int UserID = Logowanie.return_UserID();
         private string IPaddres;
+        private string avatarPath;
         private DataTable kontakty = new DataTable();
         private DataTable RoomIP = new DataTable();
         private ISoftPhone softPhone;
@@ -42,7 +44,8 @@ namespace TIP
             lb_ID.Text = UserID.ToString();
             InitializeSoftPhone();
             WczytajKontakty(true);
-
+            WczytajAvatar(avatarPath, true);
+           
         }
 
         private void InitializeSoftPhone()
@@ -74,6 +77,7 @@ namespace TIP
             }
 
         }
+        
         private void downloadIPAddres()
         {
             using (SqlConnection con = new SqlConnection(@"Server=tcp:tipserwer.database.windows.net;Database=TIP;
@@ -100,16 +104,46 @@ namespace TIP
                     {
                         MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
+                    DataTable MyAvatar = new DataTable();
                     SqlDataAdapter sd = new SqlDataAdapter("Select IPAdres From Rooms WHERE RoomID=1", con);
+                    SqlDataAdapter avatar = new SqlDataAdapter("Select AvatarPath From Users WHERE UserID='"+ UserID + "'", con);
                     sd.Fill(RoomIP);
-                    IPaddres= RoomIP.Rows[0][0].ToString();
+                    avatar.Fill(MyAvatar);
 
+                    IPaddres= RoomIP.Rows[0][0].ToString();
+                    if (MyAvatar.Rows[0][0]!=null)
+                    {
+                        avatarPath = MyAvatar.Rows[0][0].ToString();
+                    }
 
                 }
             }
         }
-
+        private void WczytajAvatar(string Url,bool user)
+        {
+            pb_my_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (Url!=String.Empty)
+            { 
+                WebRequest request = WebRequest.Create(Url);
+                using (var response = request.GetResponse())
+                {
+                    using (var str = response.GetResponseStream())
+                    {
+                        if (user == true)
+                        {
+                            pb_my_avatar.Image = Bitmap.FromStream(str);
+                            pb_my_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+                        }
+                        else if (user == false)
+                        {
+                            pb_contact_avatar.Image = Bitmap.FromStream(str);
+                            pb_contact_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+                        }
+                    }
+                }
+            }
+           
+        }
         private void WczytajKontakty(bool Online)
         {
            // listBox_kontakty.Items.Clear();
@@ -138,7 +172,7 @@ namespace TIP
                         MessageBox.Show("Problem z nawiązaniem połączenia z bazą danych.", "Błąd systemu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     
-                    SqlDataAdapter sd = new SqlDataAdapter("SELECT UserID,Nick FROM Users where IsOnline='" + Online + "' AND UserID in (SELECT ID_kontaktu FROM Contacts C INNER JOIN Users U ON C.ID_Wlasciciela=U.UserID WHERE ID_Wlasciciela='" + UserID+"')", con);
+                    SqlDataAdapter sd = new SqlDataAdapter("SELECT UserID,Nick,AvatarPath FROM Users where IsOnline='" + Online + "' AND UserID in (SELECT ID_kontaktu FROM Contacts C INNER JOIN Users U ON C.ID_Wlasciciela=U.UserID WHERE ID_Wlasciciela='" + UserID+"')", con);
                     sd.Fill(kontakty);
                     string temp;
                     for (int i = 0; i < kontakty.Rows.Count; i++)
@@ -346,7 +380,16 @@ namespace TIP
                 if (listBox_kontakty.SelectedItem.ToString() == kontakty.Rows[i][1].ToString())
                 {
                     tb_Dzwon.Text = kontakty.Rows[i][0].ToString();
-
+                    
+                    if (Uri.IsWellFormedUriString(kontakty.Rows[i][2].ToString(),UriKind.RelativeOrAbsolute) == true && kontakty.Rows[i][2].ToString() !=String.Empty)
+                    {                 
+                        WczytajAvatar(kontakty.Rows[i][2].ToString(), false);
+                    }
+                    else
+                    {
+                        pb_contact_avatar.Image = null;
+                        
+                    }
 
                 }
             }
@@ -399,13 +442,19 @@ namespace TIP
                 listBox_kontakty.Items.Clear();
 
                 WczytajKontakty(true);
-                WczytajKontakty(false);
+                //WczytajKontakty(false);
             }
         }
 
         private void bt_szukaj_Click(object sender, EventArgs e)
         {
             DodajZnajomych dod = new DodajZnajomych();
+            dod.Show();
+        }
+
+        private void pb_my_avatar_Click(object sender, EventArgs e)
+        {
+            DodajAwatar dod = new DodajAwatar();
             dod.Show();
         }
     }
