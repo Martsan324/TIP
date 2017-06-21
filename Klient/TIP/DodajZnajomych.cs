@@ -57,7 +57,7 @@ namespace TIP
 
                     int temp = 0;
                     Int32.TryParse(tb_szukaj.Text.ToString(), out temp);
-                    SqlDataAdapter sd = new SqlDataAdapter("SELECT UserID, Nick From Users Where UserID='"+ temp + "' OR Nick ='"+ tb_szukaj.Text.ToString() + "'", con);
+                    SqlDataAdapter sd = new SqlDataAdapter("SELECT UserID, Nick From Users Where UserID='"+ temp + "' OR Nick LIKE'%"+ tb_szukaj.Text.ToString() + "%'", con);
                     sd.Fill(friends);
                     if (friends.Rows.Count == 0)
                     {
@@ -65,7 +65,8 @@ namespace TIP
                     }
                     else
                     {
-                        listBox1.Items.Add(friends.Rows[0][1].ToString());
+                        for(int i=0;i<friends.Rows.Count;i++)
+                        listBox1.Items.Add(friends.Rows[i][1].ToString());
                     }
                 }
 

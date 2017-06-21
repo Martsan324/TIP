@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lb_Log = new System.Windows.Forms.ListBox();
             this.btn_PickUp = new System.Windows.Forms.Button();
             this.btn_HangUp = new System.Windows.Forms.Button();
@@ -39,16 +40,20 @@
             this.lb_ID = new System.Windows.Forms.Label();
             this.bt_szukaj = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pb_my_avatar = new System.Windows.Forms.PictureBox();
+            this.pb_contact_avatar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_my_avatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_contact_avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_Log
             // 
             this.lb_Log.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lb_Log.FormattingEnabled = true;
-            this.lb_Log.Location = new System.Drawing.Point(182, 165);
+            this.lb_Log.Location = new System.Drawing.Point(182, 191);
             this.lb_Log.Margin = new System.Windows.Forms.Padding(2);
             this.lb_Log.Name = "lb_Log";
-            this.lb_Log.Size = new System.Drawing.Size(591, 199);
+            this.lb_Log.Size = new System.Drawing.Size(591, 173);
             this.lb_Log.TabIndex = 0;
             this.lb_Log.SelectedIndexChanged += new System.EventHandler(this.lb_Log_SelectedIndexChanged);
             // 
@@ -56,7 +61,7 @@
             // 
             this.btn_PickUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_PickUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PickUp.Location = new System.Drawing.Point(440, 98);
+            this.btn_PickUp.Location = new System.Drawing.Point(444, 161);
             this.btn_PickUp.Name = "btn_PickUp";
             this.btn_PickUp.Size = new System.Drawing.Size(107, 26);
             this.btn_PickUp.TabIndex = 1;
@@ -68,7 +73,7 @@
             // 
             this.btn_HangUp.BackColor = System.Drawing.Color.IndianRed;
             this.btn_HangUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HangUp.Location = new System.Drawing.Point(316, 98);
+            this.btn_HangUp.Location = new System.Drawing.Point(320, 161);
             this.btn_HangUp.Name = "btn_HangUp";
             this.btn_HangUp.Size = new System.Drawing.Size(107, 26);
             this.btn_HangUp.TabIndex = 2;
@@ -79,7 +84,7 @@
             // tb_Dzwon
             // 
             this.tb_Dzwon.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.tb_Dzwon.Location = new System.Drawing.Point(316, 72);
+            this.tb_Dzwon.Location = new System.Drawing.Point(320, 135);
             this.tb_Dzwon.Name = "tb_Dzwon";
             this.tb_Dzwon.Size = new System.Drawing.Size(231, 20);
             this.tb_Dzwon.TabIndex = 3;
@@ -99,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(313, 54);
+            this.label1.Location = new System.Drawing.Point(317, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 13);
             this.label1.TabIndex = 5;
@@ -121,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(688, 5);
+            this.label2.Location = new System.Drawing.Point(636, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 7;
@@ -131,7 +136,7 @@
             // 
             this.lb_ID.AutoSize = true;
             this.lb_ID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_ID.Location = new System.Drawing.Point(738, 5);
+            this.lb_ID.Location = new System.Drawing.Point(686, 9);
             this.lb_ID.Name = "lb_ID";
             this.lb_ID.Size = new System.Drawing.Size(35, 13);
             this.lb_ID.TabIndex = 8;
@@ -161,12 +166,32 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "LISTA KONTAKTÓW:";
             // 
+            // pb_my_avatar
+            // 
+            this.pb_my_avatar.Image = ((System.Drawing.Image)(resources.GetObject("pb_my_avatar.Image")));
+            this.pb_my_avatar.Location = new System.Drawing.Point(723, 9);
+            this.pb_my_avatar.Name = "pb_my_avatar";
+            this.pb_my_avatar.Size = new System.Drawing.Size(50, 50);
+            this.pb_my_avatar.TabIndex = 18;
+            this.pb_my_avatar.TabStop = false;
+            this.pb_my_avatar.Click += new System.EventHandler(this.pb_my_avatar_Click);
+            // 
+            // pb_contact_avatar
+            // 
+            this.pb_contact_avatar.Location = new System.Drawing.Point(388, 14);
+            this.pb_contact_avatar.Name = "pb_contact_avatar";
+            this.pb_contact_avatar.Size = new System.Drawing.Size(100, 100);
+            this.pb_contact_avatar.TabIndex = 19;
+            this.pb_contact_avatar.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(785, 374);
+            this.Controls.Add(this.pb_contact_avatar);
+            this.Controls.Add(this.pb_my_avatar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bt_szukaj);
             this.Controls.Add(this.lb_ID);
@@ -182,6 +207,8 @@
             this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_my_avatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_contact_avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +227,8 @@
         private System.Windows.Forms.Label lb_ID;
         private System.Windows.Forms.Button bt_szukaj;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pb_my_avatar;
+        private System.Windows.Forms.PictureBox pb_contact_avatar;
     }
 }
 
